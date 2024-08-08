@@ -117,6 +117,161 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+//JAVASCRIPT FOR COMPANY CLIENTS WORKED FOR
+
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll(".slide");
+    let currentIndex = 0;
+
+    function showNextSlide() {
+        slides[currentIndex].classList.remove("active");
+        slides[currentIndex].classList.add("inactive");
+
+        currentIndex = (currentIndex + 1) % slides.length;
+
+        slides[currentIndex].classList.remove("inactive");
+        slides[currentIndex].classList.add("active");
+    }
+
+    setInterval(showNextSlide, 7000); // Change slide every 7 seconds
+});
+
+
+//JAVASCRIPT FOR WWD IMAGE
+
+let currentIndex = 0;
+const images = document.querySelectorAll('.wwdimage');
+const totalImages = images.length;
+const overlay = document.getElementById('overlay1');
+
+function showNextImage() {
+    overlay.classList.add('flash');
+    setTimeout(() => {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % totalImages;
+        images[currentIndex].classList.add('active');
+        overlay.classList.remove('flash');
+    }, 100); // Adjust this timing to match the overlay transition
+}
+
+setInterval(showNextImage, 7000); // Change image every 7 seconds
+
+
+
+
+// JAVASCRIPT FOR NUMBER INCREASE
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const clientCount = document.getElementById('client-count');
+    const satisfactionCount = document.getElementById('satisfaction-count');
+    const clientTarget = 8;
+    const satisfactionTarget = 150;
+    let hasAnimated = false;
+
+    function animateCount(element, target, suffix = '') {
+        let count = 0;
+        const duration = 2000;
+        const increment = target / (duration / 60);
+
+        function updateCount() {
+            count += increment;
+            if (count > target) count = target;
+            element.textContent = Math.floor(count) + suffix;
+            if (count < target) {
+                requestAnimationFrame(updateCount);
+            }
+        }
+
+        requestAnimationFrame(updateCount);
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                animateCount(clientCount, clientTarget, '+');
+                animateCount(satisfactionCount, satisfactionTarget, '%');
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when at least 10% of the section is in view
+    });
+
+    observer.observe(document.getElementById('exp'));
+});
+
+
+
+//JAVASCRIPT FOR TESTIMONIAL
+
+
+const testimonialWrapper = document.querySelector('.testimonial-wrapper');
+const testimonials = document.querySelectorAll('.box');
+let index = 0;
+const totalTestimonials = testimonials.length;
+
+// Clone the first testimonial and append it to the end
+testimonialWrapper.appendChild(testimonials[0].cloneNode(true));
+
+function showTestimonial(index) {
+    testimonialWrapper.style.transition = 'transform 0.5s ease-in-out';
+    testimonialWrapper.style.transform = `translateX(-${index * 100}%)`;
+}
+
+function nextTestimonial() {
+    index++;
+    showTestimonial(index);
+
+    // Reset to first testimonial without animation when reaching the cloned slide
+    if (index === totalTestimonials) {
+        setTimeout(() => {
+            testimonialWrapper.style.transition = 'none';
+            testimonialWrapper.style.transform = `translateX(0)`;
+            index = 0;
+        }, 500); // 500ms matches the transition duration
+    }
+}
+
+// Auto-slide functionality
+let autoSlide = setInterval(nextTestimonial, 5000);
+
+// Swipe functionality
+let startX = 0;
+testimonialWrapper.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+testimonialWrapper.addEventListener('touchend', (e) => {
+    const endX = e.changedTouches[0].clientX;
+    if (startX > endX + 50) {
+        clearInterval(autoSlide);
+        nextTestimonial();
+        autoSlide = setInterval(nextTestimonial, 5000);
+    }
+    if (startX < endX - 50) {
+        clearInterval(autoSlide);
+        prevTestimonial();
+        autoSlide = setInterval(nextTestimonial, 5000);
+    }
+});
+
+function prevTestimonial() {
+    if (index === 0) {
+        testimonialWrapper.style.transition = 'none';
+        index = totalTestimonials;
+        testimonialWrapper.style.transform = `translateX(-${index * 100}%)`;
+        setTimeout(() => {
+            index--;
+            testimonialWrapper.style.transition = 'transform 0.5s ease-in-out';
+            showTestimonial(index);
+        }, 0);
+    } else {
+        index--;
+        showTestimonial(index);
+    }
+}
+
 
 
 
