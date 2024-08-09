@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (entry.isIntersecting && !hasAnimated) {
                 hasAnimated = true;
                 animateCount(clientCount, clientTarget, '+');
-                animateCount(satisfactionCount, satisfactionTarget, '%');
+                animateCount(satisfactionCount, satisfactionTarget, '+');
             }
         });
     }, {
@@ -271,6 +271,57 @@ function prevTestimonial() {
         showTestimonial(index);
     }
 }
+
+
+//JAVASCRIPT FOR NEWSLETTER SUBMISSION
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+
+        // Show loading box
+        const loadingBox = document.getElementById('loadingBox');
+        loadingBox.classList.add('show-box');
+
+        // Send form data to Google Sheets
+        fetch(this.action, {
+            method: 'POST',
+            body: new FormData(this),
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            // Hide loading box after response
+            loadingBox.classList.remove('show-box');
+
+            // Show success box
+            const successBox = document.getElementById('successBox');
+            document.getElementById('successMessage').innerText = `Hi ${name}, we got your e-mail and we will reply you very soon.`;
+            successBox.classList.add('show-box');
+
+            // Hide success box after 6 seconds and reset form
+            setTimeout(() => {
+                successBox.classList.remove('show-box');
+                successBox.classList.add('hide-box'); // Ensure it moves fully out of view
+                document.getElementById('newsletterForm').reset();
+
+                // Remove the hide-box class after the transition (0.5s) to reset position
+                setTimeout(() => {
+                    successBox.classList.remove('hide-box');
+                }, 500);
+
+            }, 6000);
+        }).catch(error => {
+            console.error('Error:', error);
+            loadingBox.classList.remove('show-box');
+            alert('There was an error submitting your request. Please try again later.');
+        });
+    });
+});
 
 
 
