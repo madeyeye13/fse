@@ -119,22 +119,48 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //JAVASCRIPT FOR COMPANY CLIENTS WORKED FOR
 
-document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll(".slide");
+// document.addEventListener("DOMContentLoaded", function() {
+//     const slides = document.querySelectorAll(".slide");
+//     let currentIndex = 0;
+
+//     function showNextSlide() {
+//         slides[currentIndex].classList.remove("active");
+//         slides[currentIndex].classList.add("inactive");
+
+//         currentIndex = (currentIndex + 1) % slides.length;
+
+//         slides[currentIndex].classList.remove("inactive");
+//         slides[currentIndex].classList.add("active");
+//     }
+
+//     setInterval(showNextSlide, 7000); // Change slide every 7 seconds
+// });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const sliderWrapper = document.querySelector('.slider-wrapper');
     let currentIndex = 0;
 
-    function showNextSlide() {
-        slides[currentIndex].classList.remove("active");
-        slides[currentIndex].classList.add("inactive");
-
-        currentIndex = (currentIndex + 1) % slides.length;
-
-        slides[currentIndex].classList.remove("inactive");
-        slides[currentIndex].classList.add("active");
-    }
-
-    setInterval(showNextSlide, 7000); // Change slide every 7 seconds
+    setInterval(() => {
+        currentIndex++;
+        
+        if (currentIndex > 1) {
+            // Reset to the first image without a sliding effect
+            currentIndex = 0;
+            sliderWrapper.style.transition = 'none'; // Disable transition
+            sliderWrapper.style.transform = 'translateX(0%)';
+            
+            // Re-enable the transition for the next slide
+            setTimeout(() => {
+                sliderWrapper.style.transition = 'transform 1s ease-in-out';
+            }, 50); // Small delay to allow the browser to register the transition reset
+        } else {
+            // Slide to the next image
+            sliderWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    }, 7000); // Change image every 7 seconds
 });
+
 
 
 //JAVASCRIPT FOR WWD IMAGE
@@ -165,8 +191,10 @@ setInterval(showNextImage, 7000); // Change image every 7 seconds
 document.addEventListener('DOMContentLoaded', function() {
     const clientCount = document.getElementById('client-count');
     const satisfactionCount = document.getElementById('satisfaction-count');
+    const satisfy = document.getElementById('satisfaction-coun');
     const clientTarget = 8;
     const satisfactionTarget = 150;
+    const satisfyTarget = 100;
     let hasAnimated = false;
 
     function animateCount(element, target, suffix = '') {
@@ -192,6 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 hasAnimated = true;
                 animateCount(clientCount, clientTarget, '+');
                 animateCount(satisfactionCount, satisfactionTarget, '+');
+                animateCount(satisfy, satisfyTarget, '%');
             }
         });
     }, {
@@ -211,19 +240,26 @@ const testimonials = document.querySelectorAll('.box');
 let index = 0;
 const totalTestimonials = testimonials.length;
 
-// Clone the first testimonial and append it to the end
-testimonialWrapper.appendChild(testimonials[0].cloneNode(true));
+function getBoxWidth() {
+    return window.innerWidth >= 1024 ? 50 : 100;
+}
+
+// Clone the first two testimonials and append them to the end (only for larger screens)
+if (window.innerWidth >= 1024) {
+    testimonialWrapper.appendChild(testimonials[0].cloneNode(true));
+    testimonialWrapper.appendChild(testimonials[1].cloneNode(true));
+}
 
 function showTestimonial(index) {
     testimonialWrapper.style.transition = 'transform 0.5s ease-in-out';
-    testimonialWrapper.style.transform = `translateX(-${index * 100}%)`;
+    testimonialWrapper.style.transform = `translateX(-${index * getBoxWidth()}%)`;
 }
 
 function nextTestimonial() {
     index++;
     showTestimonial(index);
 
-    // Reset to first testimonial without animation when reaching the cloned slide
+    // Instantly reset to first testimonial without visible transition
     if (index === totalTestimonials) {
         setTimeout(() => {
             testimonialWrapper.style.transition = 'none';
@@ -260,7 +296,7 @@ function prevTestimonial() {
     if (index === 0) {
         testimonialWrapper.style.transition = 'none';
         index = totalTestimonials;
-        testimonialWrapper.style.transform = `translateX(-${index * 100}%)`;
+        testimonialWrapper.style.transform = `translateX(-${index * getBoxWidth()}%)`;
         setTimeout(() => {
             index--;
             testimonialWrapper.style.transition = 'transform 0.5s ease-in-out';
@@ -271,6 +307,7 @@ function prevTestimonial() {
         showTestimonial(index);
     }
 }
+
 
 
 //JAVASCRIPT FOR NEWSLETTER SUBMISSION
@@ -300,20 +337,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Show success box
             const successBox = document.getElementById('successBox');
-            document.getElementById('successMessage').innerText = `Hi ${name}, we got your e-mail and we will reply you very soon.`;
+            document.getElementById('successMessage').innerText = `Hi ${name}, we got your e-mail and we will reply to you very soon.`;
             successBox.classList.add('show-box');
 
             // Hide success box after 6 seconds and reset form
             setTimeout(() => {
                 successBox.classList.remove('show-box');
-                successBox.classList.add('hide-box'); // Ensure it moves fully out of view
+                successBox.classList.add('hide-box');
+
+                // Reset the form
                 document.getElementById('newsletterForm').reset();
 
-                // Remove the hide-box class after the transition (0.5s) to reset position
+                // Ensure the box is hidden after transition
                 setTimeout(() => {
                     successBox.classList.remove('hide-box');
-                }, 500);
-
+                }, 500); // Match with the CSS transition time
             }, 6000);
         }).catch(error => {
             console.error('Error:', error);
@@ -322,6 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 

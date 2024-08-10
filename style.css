@@ -27,7 +27,8 @@ body {
 :root {
     --green-color: #064403;
     --defaultgold-color: #ffbf00;
-    --gold-color:#b5822c;
+    --gold-color:#e2ae45;
+    /* --gold-color: #b5822c; */
     --lightgold-color:#fff7eb;
     --white-color: white;
     --fadedgold: #f5d189;
@@ -423,7 +424,7 @@ input [type="submit"]:hover #custom-cursor {
 }
 
 
-.slider {
+/* .slider {
     position: relative;
     width: 100%;
     height: 100px;
@@ -460,7 +461,34 @@ input [type="submit"]:hover #custom-cursor {
 .inactive {
     left: 100%;
     opacity: 0;
+} */
+
+
+/* Container for the slider */
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing images */
+    position: relative;
 }
+
+/* Wrapper that holds all the images */
+.slider-wrapper {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Smooth transition for sliding */
+}
+
+/* Each slider item (image container) */
+.slider-item {
+    min-width: 100%; /* Each item takes up full container width */
+    padding-right: 20px; /* Add spacing between images */
+}
+
+/* Each image in the slider */
+.slider-image {
+    width: 100%; /* Image takes up full width of its container */
+    display: block;
+}
+
 
 
 
@@ -469,23 +497,24 @@ input [type="submit"]:hover #custom-cursor {
 
 #abt {
     display: flex;
-    text-align: center;
+    text-align: left;
     margin-top: 70px;
     overflow: hidden;
     justify-content: center;
 }
 
 .abt1 h6 {
-    font-family: var(--font-3);
+    font-family: var(--font-2);
     color: var(--gold-color);
-    font-size: 1.3em;
+    font-size: 1em;
+    padding-left: 25px;
 }
 
 .abt1 h1{
     font-family: var(--font-1);
     font-weight: 900;
-    padding-left: 6%;
-    padding-right: 6%;
+    padding-left: 25px;
+    padding-right: 25px;
     font-size: 2em;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -494,8 +523,8 @@ input [type="submit"]:hover #custom-cursor {
 
 .abt1 p {
     font-size: 1em;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 25px;
+    padding-right: 25px;
     line-height: 30px;
     color: var(--fade-out);
     margin-bottom: 30px;
@@ -511,6 +540,7 @@ input [type="submit"]:hover #custom-cursor {
 
 .abt1 h4 {
     margin-bottom: 50px;
+    padding-left: 25px;
 }
 
 .abt1 a i {
@@ -532,7 +562,7 @@ input [type="submit"]:hover #custom-cursor {
 .image-container {
     position: relative;
     width: 100%;
-    margin-bottom: 110%; 
+    /* margin-bottom: 110%;  */
   }
   
   .wwdimage {
@@ -574,7 +604,7 @@ input [type="submit"]:hover #custom-cursor {
     background: var(--green-color);
     display: flex;
     flex-direction: column;
-    height: 700px;
+    height: 800px;
     margin-top: 50px;
 }
 
@@ -585,7 +615,7 @@ input [type="submit"]:hover #custom-cursor {
     display: flex;
     flex-direction: column;
     text-align: left;
-    gap: 30px;
+    gap: 40px;
 }
 
 .expt h6 {
@@ -616,6 +646,7 @@ input [type="submit"]:hover #custom-cursor {
 
 /*------------------------TESTY------------------*/
 
+/* Testimonial section styling */
 #testy {
     margin-top: 50px;
     display: flex;
@@ -639,23 +670,23 @@ input [type="submit"]:hover #custom-cursor {
 
 .testii h1 {
     font-family: var(--font-1);
-    color: var (--dark-main-color);
+    color: var(--dark-main-color);
     font-size: 2em;
 }
-
-
 
 .testimonial-container {
     overflow: hidden;
     position: relative;
     width: 100%;
-    max-width: 600px;
+    max-width: 1200px;
     margin: auto;
 }
 
 .testimonial-wrapper {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    flex-wrap: nowrap; /* Ensure no wrapping occurs */
+    width: 100%;
 }
 
 .box {
@@ -665,7 +696,6 @@ input [type="submit"]:hover #custom-cursor {
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
-    /* margin: 0 10px; */
 }
 
 .box h4 {
@@ -724,7 +754,7 @@ input [type="submit"]:hover #custom-cursor {
   }
   .category-section {
     position: relative;
-    width: 340px;
+    width: 100%;
     height: 350px;
     margin-bottom: 40px;
     overflow: hidden;
@@ -1014,6 +1044,19 @@ input [type="submit"]:hover #custom-cursor {
 }
 
 
+.newsletter-container button {
+    background: none;
+    border: none;
+    color: var(--white-color);
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.newsletter-container button:hover {
+    color: var(--dark-main-color);
+}
+
+
 
 .newsletter-form h4 {
    
@@ -1042,20 +1085,25 @@ input [type="submit"]:hover #custom-cursor {
 /* Notification boxes */
 .notification-box {
     position: fixed;
-    top: -100px; /* Initially hidden above the viewport */
+    top: 20px; /* Visible position */
     left: 50%;
     transform: translateX(-50%);
     background-color: #ff9800;
     color: #fff;
-    padding: 15px 20px;
+   padding-left: 15px;
+   padding-right: 15px;
+    width: 70%;
+    height: 80px;
     border-radius: 5px;
     font-size: 16px;
     display: flex;
     align-items: center;
     gap: 10px;
     z-index: 1000;
-    transition: top 0.5s ease-in-out;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+    opacity: 0; 
+    visibility: hidden; 
 }
 
 /* Loading circle animation */
@@ -1078,11 +1126,61 @@ input [type="submit"]:hover #custom-cursor {
     background-color: #4CAF50;
 }
 
-/* Slide down and up */
+/* Show the box */
 .show-box {
-    top: 20px; /* Slides the box into view */
+    opacity: 1; /* Fully visible */
+    visibility: visible; /* Fully visible */
 }
 
+/* Hide the box */
 .hide-box {
-    top: -180px; /* Move the box fully out of view */
+    opacity: 0; /* Fully hidden */
+    visibility: hidden; /* Fully hidden */
+}
+
+/*-----------SOCIAL-------*/
+
+.soc {
+    color: var(--white-color);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+/*-----------Copyright-------*/
+
+.cpy {
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.cpy h5 {
+    color: var(--white-color);
+    font-size: 0.7em;
+    font-weight: 500;
+}
+
+
+.social {
+    padding-left: 25px;
+    margin-bottom: 50px;
+}
+
+
+.social h6 {
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.social h6 a {
+    text-decoration: underline;
+    color: var(--green-color);
+}
+
+
+
+.cpy i {
+    color: var(--white-color);
 }
