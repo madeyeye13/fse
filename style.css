@@ -995,6 +995,7 @@ input [type="submit"]:hover #custom-cursor {
 
 .email {
     color: var(--white-color);
+    margin-top: 10px;
 }
 
 .email h4 {

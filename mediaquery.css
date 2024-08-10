@@ -383,18 +383,80 @@
 
 
 
+
+     /*------------------------------LETS WORK---------------------*/
+
+     .wrk1 {
+        padding-left: 70px;
+     }
+
+
+
+
+
+
+
+
     /*------------------------------FOOOTER---------------------*/
 
     .footbdy {
         display: flex;
         flex-direction: row;
         padding-left: 70px;
-        padding-right: 70px;
+        padding-right: 80px;
     }
 
     .table {
         display: flex;
         gap: 20px;
     }
+
+
+    .newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    width: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+.mnu, .address, .newsletter-container {
+    margin-top: 80px;
+    gap: 10px;
+}
+
+.mnu {
+    position: relative;
+    right: 70px;
+}
+
+.address {
+    position: relative;
+    right: 30px;
+}
+
+.email {
+    margin-top: 20px;
+}
+
+
+.social {
+    padding-left: 70px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.social h6 {
+    position: relative;
+    margin-left: 150px;
+}
+
+.cpy {
+    position: relative;
+    margin-left: 50px;
+    top: -20px;
+}
 
 }
