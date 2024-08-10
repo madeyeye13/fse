@@ -232,22 +232,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//JAVASCRIPT FOR TESTIMONIAL
-
+// JAVASCRIPT FOR TESTIMONIAL
 
 const testimonialWrapper = document.querySelector('.testimonial-wrapper');
-const testimonials = document.querySelectorAll('.box');
+let testimonials = document.querySelectorAll('.box');
 let index = 0;
-const totalTestimonials = testimonials.length;
+let totalTestimonials = testimonials.length;
 
 function getBoxWidth() {
     return window.innerWidth >= 1024 ? 50 : 100;
 }
 
-// Clone the first two testimonials and append them to the end (only for larger screens)
+// Clone the first two testimonials and append them to the end for screens 728px and above
+if (window.innerWidth >= 728) {
+    testimonialWrapper.appendChild(testimonials[0].cloneNode(true));
+    testimonialWrapper.appendChild(testimonials[1].cloneNode(true));
+    // Re-query the testimonials to include the newly added clones
+    testimonials = document.querySelectorAll('.box');
+    totalTestimonials = testimonials.length;
+}
+
+// Clone the first two testimonials and append them to the end again for screens 1024px and above
 if (window.innerWidth >= 1024) {
     testimonialWrapper.appendChild(testimonials[0].cloneNode(true));
     testimonialWrapper.appendChild(testimonials[1].cloneNode(true));
+    // Re-query the testimonials to include the newly added clones
+    testimonials = document.querySelectorAll('.box');
+    totalTestimonials = testimonials.length;
 }
 
 function showTestimonial(index) {
@@ -259,7 +270,7 @@ function nextTestimonial() {
     index++;
     showTestimonial(index);
 
-    // Instantly reset to first testimonial without visible transition
+    // Instantly reset to the first testimonial without visible transition
     if (index === totalTestimonials) {
         setTimeout(() => {
             testimonialWrapper.style.transition = 'none';
@@ -295,7 +306,7 @@ testimonialWrapper.addEventListener('touchend', (e) => {
 function prevTestimonial() {
     if (index === 0) {
         testimonialWrapper.style.transition = 'none';
-        index = totalTestimonials;
+        index = totalTestimonials - 1;
         testimonialWrapper.style.transform = `translateX(-${index * getBoxWidth()}%)`;
         setTimeout(() => {
             index--;
@@ -307,6 +318,7 @@ function prevTestimonial() {
         showTestimonial(index);
     }
 }
+
 
 
 

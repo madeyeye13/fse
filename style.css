@@ -1008,6 +1008,10 @@ input [type="submit"]:hover #custom-cursor {
     font-size: 1em;
 }
 
+.footlogo2 {
+    display: none;
+}
+
 
 /*-----------Newsletter on Footer-------*/
 
@@ -1185,3 +1189,8 @@ input [type="submit"]:hover #custom-cursor {
 .cpy i {
     color: var(--white-color);
 }
+
+
+
+
+/*----------------------END OF HOMEPAGE-------------------*/

@@ -19,6 +19,286 @@
 
 @media (min-width: 728px) {
 
+    .hlogo {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .nav-link a {
+        padding-left: 30px;
+        font-size: 1.2em;
+    }
+
+    .nav-link i {
+        padding-right: 30px;
+    }
+
+    .service-list {
+        padding-left: 30px;
+    }
+
+
+
+    /*-------------------INTRO-------------*/
+
+
+    .intro1 {
+        /* margin-top: 70px; */
+        padding-left: 50px;
+        /* padding-right: px; */
+    }
+
+    .intro1 h1{
+        font-family: var(--font-1);
+        font-size: 4.4em;
+        color: var(--dark-main-color);
+        margin-bottom: 20px;
+        font-weight: bolder;
+        /* padding-left: 50px; */
+        padding-right: 100px;
+    }
+
+
+    /*-------------------------ABOUT--------------------*/
+
+
+    .abtinfo {
+        padding-left: 30px;
+    }
+
+    .abt1 h1 {
+        padding-right: 100px;
+        font-size: 2.5em;
+    }
+    .abt1 p {
+        padding-right: 100px;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    .abt1 h6 {
+        padding-left: 30px;
+    }
+
+
+
+    /*-------------------------ABOUT--------------------*/
+
+    #exp {
+        background: var(--green-color);
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        /* margin-top: 50px; */
+    }
+
+
+
+
+    .expt {
+        padding-left: 50px;
+        padding-right: 40px;
+    }
+
+    .expt h1 {
+        font-size: 2.5em;
+    }
+
+    .c-client {
+        display: flex;
+        flex-direction: row;
+        gap: 100px;
+     }
+
+
+
+
+
+     /*--------------------------------------tESTIMONIAL----------------------*/
+
+     .testii {
+        padding-left: 50px;
+     }
+
+
+     .testimonial-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        /* margin-right: 10px; */
+        /* gap: 20px; */
+        width: 100%;
+
+        
+    }
+
+     .box {
+        min-width: 50%; /* Two testimonials side by side */
+        position: relative;
+        
+        
+        
+    }
+
+    .testii h1 {
+        font-size: 2.5em;
+        padding-right: 30%;
+    }
+
+
+
+
+    /*--------------------------------PROJECTS-----------------------*/
+
+
+    .pro1 {
+        padding-left: 50px;
+    }
+
+    .pro1 h1 {
+        font-size: 2.5em;
+        padding-right: 50%;
+    }
+
+    .father-category {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+        width: 100%;
+    }
+    .category-section {
+        width: 320px;
+    }
+
+    .image-container2 img {
+        width: 100%;
+    }
+
+
+
+
+    /*------------------------------BRIEF---------------------*/
+
+
+    #brief {
+        margin-top: 70px;
+    }
+
+    #brief h1 {
+        padding-left: 30px;
+        font-size: 2.5em;
+        font-weight: 700;
+    }
+
+    .abt-content {
+        padding-left: 30px;
+        padding-right: 20%;
+        font-weight: 600;
+    }
+
+
+
+
+     /*------------------------------LETS WORK---------------------*/
+
+     .wrk1 {
+        padding-left: 50px;
+     }
+
+
+
+
+
+
+
+    /*--------------------------------------FOOTER----------------------*/
+
+
+
+    .footbdy {
+        display: flex;
+        flex-direction: row;
+        padding-left: 70px;
+        padding-right: 80px;
+    }
+
+    .table {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+
+    .newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    width: 200px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+.mnu, .address, .newsletter-container {
+    margin-top: 80px;
+    gap: 20px;
+}
+
+.mnu {
+    position: relative;
+    right: 20px;
+}
+
+.address {
+    position: relative;
+    right: 0px;
+}
+
+.email {
+    margin-top: 20px;
+}
+
+
+.social {
+    padding-left: 50px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+}
+
+.social h6 {
+    position: relative;
+    margin-left: 20px;
+}
+
+.cpy {
+    position: relative;
+    margin-left: 20px;
+    top: -20px;
+}
+
+.footlogo {
+    display: none;
+}
+
+.footlogo2 {
+    display: flex;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.footlogo2 img {
+    width: 200px;
+}
+
+
+
+
+
+
+
+/*----------------------END OF HOMEPAGE-------------------*/
+
+
+
 }
 
 
@@ -57,10 +337,19 @@
         padding: 0;
     }
 
+    .nav-link i {
+        padding-right: 0px;
+    }
+
     .navtext {
         border-bottom: none;
         padding: 0 0px;
-        margin-right: 50px;
+        margin-right: 20px;
+    }
+
+    .nav-link a {
+        /* padding-left: 30px; */
+        font-size: 1em;
     }
 
 
@@ -280,7 +569,7 @@
         padding-left: 70px;
         padding-right: 40%;
         font-weight: bolder;
-        padding-top: 30px;
+        padding-top: 10px;
      }
 
      .c-client {
@@ -335,7 +624,7 @@
 
 
 
-    /*-------------------TESTIMONIAL-------------------*/
+    /*-------------------PROJECTS-------------------*/
 
 
     .pro1 {
@@ -408,6 +697,7 @@
 
     .table {
         display: flex;
+        flex-direction: row;
         gap: 20px;
     }
 
@@ -458,5 +748,31 @@
     margin-left: 50px;
     top: -20px;
 }
+
+.footlogo2 {
+    visibility: hidden;
+}
+
+.footlogo {
+    display: flex;
+}
+
+
+
+
+
+
+
+    /*----------------------END OF HOMEPAGE-------------------*/
+
+
+
+
+
+
+
+
+
+
 
 }
