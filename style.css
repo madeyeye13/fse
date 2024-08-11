@@ -68,6 +68,14 @@ input [type="submit"]:hover #custom-cursor {
 }
 
 
+@media (max-width: 1024px) {
+    #custom-cursor {
+        display: none;
+    }
+
+}
+
+
 
 
 /*--------------------------HEADER------------------*/
@@ -562,6 +570,7 @@ input [type="submit"]:hover #custom-cursor {
 .image-container {
     position: relative;
     width: 100%;
+    height: 400px;
     /* margin-bottom: 110%;  */
   }
   
