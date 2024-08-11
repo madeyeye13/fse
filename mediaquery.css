@@ -36,6 +36,7 @@
     .service-list {
         padding-left: 30px;
     }
+    
 
 
 
@@ -295,8 +296,11 @@
 
 
 
-/*----------------------END OF HOMEPAGE-------------------*/
+    /*----------------------END OF HOMEPAGE-------------------*/
 
+
+
+    /*----------------------Service-------------------*/
 
 
 }
@@ -693,6 +697,8 @@
         flex-direction: row;
         padding-left: 70px;
         padding-right: 80px;
+        position: relative;
+        top: -50px;
     }
 
     .table {
