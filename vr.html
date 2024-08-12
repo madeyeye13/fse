@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Registration | Event Company Curating Unforgetable Memories</title>
+    <meta name="description" content="Florah Signature Events">
+
+    <!--==========FavIcon========-->
+    <link rel="icon" type="image/x-icon" href="/image/favicon.png">
+
+    <!--============Google Fonts================-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <!--====================Font Awesome======================-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" 
+     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" 
+     referrerpolicy="no-referrer" />
+
+     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <!--=====Cascading Style Sheet====-->
+
+     <link rel="stylesheet" href="style.css">
+
+
+     <!--=====Media Query====-->
+
+     <link rel="stylesheet" href="mediaquery.css">
+
+    <!--============ Boxicons ===============-->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+    <!------------AOS--------------->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+
+
+</head>
+<body>
+
+    <!------------------------CUSTOM CURSOR----------------------->
+
+    <div id="custom-cursor"></div>
+
+    <!------------------------Header----------------------->
+
+    <header id="head">
+        <div class="hlogo">
+            <div class="hcontent">
+                <a href="index.html"><img src="image/logo3.png" alt="logo"></a>
+            </div>
+            <div class="menu-btns hamburger-menu">
+                <i class="fa-solid fa-bars open"></i>
+                <i id="close" class="fa-solid fa-xmark hide"></i>
+            </div>
+        </div>
+    
+        <div id="nav-bar" class="slide-up">
+            <div class="nav-link">
+                <div class="navtext push-up">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="navtext push-up service-menu">
+                    <div class="service-link">
+                        <a href="service.html">Service</a>
+                        <i class="fa-solid fa-chevron-right chevron"></i>
+                    </div>
+                    <div class="service-list hide">
+                        <a href="ep.html"><div>Event Planning</div></a>
+                        <a href="ec.html"><div>Event Coordination</div></a>
+                        <a href="econ.html"><div>Consultation</div></a>
+                        <a href="vs.html"><div>Vending Sourcing & Management</div></a>
+                    </div>
+                </div>
+                <div class="navtext push-up" ><a href="gallery.html">Gallery</a></div>
+                <div class="navtext push-up"><a href="about.html">About</a></div>
+                <div class="navtext push-up"><a href="book.html">Book Now</a></div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-------------------------BODY-------------------------------->
+    
+    <section id="intro">
+
+        <div class="intro1">
+            <h6>What We Do</h6>
+            <h1>Vendor Sourcing</h1>
+            
+        </div>
+
+
+
+
+    </section>
+
+
+
+    <!---------------------------HERO---------------------------------->
+
+    <section id="srvimg">
+        <div class="simg">
+            <img src="image/20.jpg" alt="picture">
+        </div>
+    </section>
+
+
+    <!----------Vendor Registration-------------->
+
+
+
+    <section id="vendor-registration">
+        <h2>Vendor Registration Form</h2>
+        <div class="vendor-registration-container">
+            <p>Kindly fill out the vendor registration form below and we will get back to you after review.</p>
+            <form id="vendor-form" action="https://formspree.io/f/mjkbrjvk" method="POST">
+                <label for="name">Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="bio">Tell Us About You (Short Bio)</label>
+                <textarea id="bio" name="bio" rows="4"></textarea>
+    
+                <label for="company-name">Company's Or Brand's Legal Name</label>
+                <input type="text" id="company-name" name="company-name">
+    
+                <label for="products-services">What kind of products or services does your company offer?</label>
+                <textarea id="products-services" name="products-services" rows="4"></textarea>
+    
+                <label for="website">Company Website</label>
+                <input type="url" id="website" name="website">
+    
+                <label for="address">Company Address <span class="required">*</span></label>
+                <input type="text" id="address" name="address" required>
+    
+                <label for="city">City <span class="required">*</span></label>
+                <input type="text" id="city" name="city" required>
+    
+                <label for="state">State <span class="required">*</span></label>
+                <input type="text" id="state" name="state" required>
+    
+                <label for="country">Country</label>
+                <div class="custom-dropdown" onclick="toggleDropdown()">
+                    <span id="selected-country">Afghanistan</span>
+                    <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                </div>
+    
+                <label for="rep-name">Name of the person representing the company <span class="required">*</span></label>
+                <input type="text" id="rep-name" name="rep-name" required>
+    
+                <label for="rep-email">Email of the person representing the company <span class="required">*</span></label>
+                <input type="email" id="rep-email" name="rep-email" required>
+    
+                <label for="rep-phone">Phone No <span class="required">*</span></label>
+                <input type="tel" id="rep-phone" name="rep-phone" required>
+    
+                <button type="submit">
+                    <span class="loading-dots" style="display: none;"></span>Submit
+                </button>
+                    <!-- <div class="loading-message">
+                        <span class="loading-circle"></span> Please Wait....
+                    </div>
+            
+                    <div class="success-message">
+                        Thanks for filling the form, <span id="user-name"></span>. We'll reach out to you.
+                    </div> -->
+            </form>
+
+        </button>
+        <div class="loading-message">
+            <span class="loading-circle"></span> Please Wait....
+        </div>
+
+        <div class="success-message">
+            Thanks for filling the form, <span id="user-name"></span>. We'll reach out to you.
+        </div>
+        </div>
+    </section>
+
+        <!------------------------------LISTOF COUNTRIES------------------------------------>
+    
+        <div id="overlay" onclick="toggleDropdown()"></div>
+        <div id="dropdownOverlay">
+            <div class="dropdown-frame">
+                <div class="dropdown-list">
+                    <label>Afghanistan <input type="radio" name="country" value="Afghanistan"></label>
+                    <hr>
+                    <label>Albania <input type="radio" name="country" value="Albania"></label>
+                    <hr>
+                    <label>Algeria <input type="radio" name="country" value="Algeria"></label>
+                    <hr>
+                    <label>Andorra <input type="radio" name="country" value="Andorra"></label>
+                    <hr>
+                    <label>Angola <input type="radio" name="country" value="Angola"></label>
+                    <hr>
+                    <label>Antigua and Barbuda <input type="radio" name="country" value="Antigua and Barbuda"></label>
+                    <hr>
+                    <label>Argentina <input type="radio" name="country" value="Argentina"></label>
+                    <hr>
+                    <label>Armenia <input type="radio" name="country" value="Armenia"></label>
+                    <hr>
+                    <label>Australia <input type="radio" name="country" value="Australia"></label>
+                    <hr>
+                    <label>Austria <input type="radio" name="country" value="Austria"></label>
+                    <hr>
+                    <label>Azerbaijan <input type="radio" name="country" value="Azerbaijan"></label>
+                    <hr>
+                    <label>Bahamas <input type="radio" name="country" value="Bahamas"></label>
+                    <hr>
+                    <label>Bahrain <input type="radio" name="country" value="Bahrain"></label>
+                    <hr>
+                    <label>Bangladesh <input type="radio" name="country" value="Bangladesh"></label>
+                    <hr>
+                    <label>Barbados <input type="radio" name="country" value="Barbados"></label>
+                    <hr>
+                    <label>Belarus <input type="radio" name="country" value="Belarus"></label>
+                    <hr>
+                    <label>Belgium <input type="radio" name="country" value="Belgium"></label>
+                    <hr>
+                    <label>Belize <input type="radio" name="country" value="Belize"></label>
+                    <hr>
+                    <label>Benin <input type="radio" name="country" value="Benin"></label>
+                    <hr>
+                    <label>Bhutan <input type="radio" name="country" value="Bhutan"></label>
+                    <hr>
+                    <label>Bolivia <input type="radio" name="country" value="Bolivia"></label>
+                    <hr>
+                    <label>Bosnia and Herzegovina <input type="radio" name="country" value="Bosnia and Herzegovina"></label>
+                    <hr>
+                    <label>Botswana <input type="radio" name="country" value="Botswana"></label>
+                    <hr>
+                    <label>Brazil <input type="radio" name="country" value="Brazil"></label>
+                    <hr>
+                    <label>Brunei <input type="radio" name="country" value="Brunei"></label>
+                    <hr>
+                    <label>Bulgaria <input type="radio" name="country" value="Bulgaria"></label>
+                    <hr>
+                    <label>Burkina Faso <input type="radio" name="country" value="Burkina Faso"></label>
+                    <hr>
+                    <label>Burundi <input type="radio" name="country" value="Burundi"></label>
+                    <hr>
+                    <label>Cabo Verde <input type="radio" name="country" value="Cabo Verde"></label>
+                    <hr>
+                    <label>Cambodia <input type="radio" name="country" value="Cambodia"></label>
+                    <hr>
+                    <label>Cameroon <input type="radio" name="country" value="Cameroon"></label>
+                    <hr>
+                    <label>Canada <input type="radio" name="country" value="Canada"></label>
+                    <hr>
+                    <label>Central African Republic <input type="radio" name="country" value="Central African Republic"></label>
+                    <hr>
+                    <label>Chad <input type="radio" name="country" value="Chad"></label>
+                    <hr>
+                    <label>Chile <input type="radio" name="country" value="Chile"></label>
+                    <hr>
+                    <label>China <input type="radio" name="country" value="China"></label>
+                    <hr>
+                    <label>Colombia <input type="radio" name="country" value="Colombia"></label>
+                    <hr>
+                    <label>Comoros <input type="radio" name="country" value="Comoros"></label>
+                    <hr>
+                    <label>Congo, Democratic Republic of the <input type="radio" name="country" value="Congo, Democratic Republic of the"></label>
+                    <hr>
+                    <label>Congo, Republic of the <input type="radio" name="country" value="Congo, Republic of the"></label>
+                    <hr>
+                    <label>Costa Rica <input type="radio" name="country" value="Costa Rica"></label>
+                    <hr>
+                    <label>Croatia <input type="radio" name="country" value="Croatia"></label>
+                    <hr>
+                    <label>Cuba <input type="radio" name="country" value="Cuba"></label>
+                    <hr>
+                    <label>Cyprus <input type="radio" name="country" value="Cyprus"></label>
+                    <hr>
+                    <label>Czech Republic <input type="radio" name="country" value="Czech Republic"></label>
+                    <hr>
+                    <label>Denmark <input type="radio" name="country" value="Denmark"></label>
+                    <hr>
+                    <label>Djibouti <input type="radio" name="country" value="Djibouti"></label>
+                    <hr>
+                    <label>Dominica <input type="radio" name="country" value="Dominica"></label>
+                    <hr>
+                    <label>Dominican Republic <input type="radio" name="country" value="Dominican Republic"></label>
+                    <hr>
+                    <label>Ecuador <input type="radio" name="country" value="Ecuador"></label>
+                    <hr>
+                    <label>Egypt <input type="radio" name="country" value="Egypt"></label>
+                    <hr>
+                    <label>El Salvador <input type="radio" name="country" value="El Salvador"></label>
+                    <hr>
+                    <label>Equatorial Guinea <input type="radio" name="country" value="Equatorial Guinea"></label>
+                    <hr>
+                    <label>Eritrea <input type="radio" name="country" value="Eritrea"></label>
+                    <hr>
+                    <label>Estonia <input type="radio" name="country" value="Estonia"></label>
+                    <hr>
+                    <label>Eswatini <input type="radio" name="country" value="Eswatini"></label>
+                    <hr>
+                    <label>Ethiopia <input type="radio" name="country" value="Ethiopia"></label>
+                    <hr>
+                    <label>Fiji <input type="radio" name="country" value="Fiji"></label>
+                    <hr>
+                    <label>Finland <input type="radio" name="country" value="Finland"></label>
+                    <hr>
+                    <label>France <input type="radio" name="country" value="France"></label>
+                    <hr>
+                    <label>Gabon <input type="radio" name="country" value="Gabon"></label>
+                    <hr>
+                    <label>Gambia <input type="radio" name="country" value="Gambia"></label>
+                    <hr>
+                    <label>Georgia <input type="radio" name="country" value="Georgia"></label>
+                    <hr>
+                    <label>Germany <input type="radio" name="country" value="Germany"></label>
+                    <hr>
+                    <label>Ghana <input type="radio" name="country" value="Ghana"></label>
+                    <hr>
+                    <label>Greece <input type="radio" name="country" value="Greece"></label>
+                    <hr>
+                    <label>Grenada <input type="radio" name="country" value="Grenada"></label>
+                    <hr>
+                    <label>Guatemala <input type="radio" name="country" value="Guatemala"></label>
+                    <hr>
+                    <label>Guinea <input type="radio" name="country" value="Guinea"></label>
+                    <hr>
+                    <label>Guinea-Bissau <input type="radio" name="country" value="Guinea-Bissau"></label>
+                    <hr>
+                    <label>Guyana <input type="radio" name="country" value="Guyana"></label>
+                    <hr>
+                    <label>Haiti <input type="radio" name="country" value="Haiti"></label>
+                    <hr>
+                    <label>Honduras <input type="radio" name="country" value="Honduras"></label>
+                    <hr>
+                    <label>Hungary <input type="radio" name="country" value="Hungary"></label>
+                    <hr>
+                    <label>Iceland <input type="radio" name="country" value="Iceland"></label>
+                    <hr>
+                    <label>India <input type="radio" name="country" value="India"></label>
+                    <hr>
+                    <label>Indonesia <input type="radio" name="country" value="Indonesia"></label>
+                    <hr>
+                    <label>Iran <input type="radio" name="country" value="Iran"></label>
+                    <hr>
+                    <label>Iraq <input type="radio" name="country" value="Iraq"></label>
+                    <hr>
+                    <label>Ireland <input type="radio" name="country" value="Ireland"></label>
+                    <hr>
+                    <label>Israel <input type="radio" name="country" value="Israel"></label>
+                    <hr>
+                    <label>Italy <input type="radio" name="country" value="Italy"></label>
+                    <hr>
+                    <label>Jamaica <input type="radio" name="country" value="Jamaica"></label>
+                    <hr>
+                    <label>Japan <input type="radio" name="country" value="Japan"></label>
+                    <hr>
+                    <label>Jordan <input type="radio" name="country" value="Jordan"></label>
+                    <hr>
+                    <label>Kazakhstan <input type="radio" name="country" value="Kazakhstan"></label>
+                    <hr>
+                    <label>Kenya <input type="radio" name="country" value="Kenya"></label>
+                    <hr>
+                    <label>Kiribati <input type="radio" name="country" value="Kiribati"></label>
+                    <hr>
+                    <label>Korea, North <input type="radio" name="country" value="Korea, North"></label>
+                    <hr>
+                    <label>Korea, South <input type="radio" name="country" value="Korea, South"></label>
+                    <hr>
+                    <label>Kosovo <input type="radio" name="country" value="Kosovo"></label>
+                    <hr>
+                    <label>Kuwait <input type="radio" name="country" value="Kuwait"></label>
+                    <hr>
+                    <label>Kyrgyzstan <input type="radio" name="country" value="Kyrgyzstan"></label>
+                    <hr>
+                    <label>Laos <input type="radio" name="country" value="Laos"></label>
+                    <hr>
+                    <label>Latvia <input type="radio" name="country" value="Latvia"></label>
+                    <hr>
+                    <label>Lebanon <input type="radio" name="country" value="Lebanon"></label>
+                    <hr>
+                    <label>Lesotho <input type="radio" name="country" value="Lesotho"></label>
+                    <hr>
+                    <label>Liberia <input type="radio" name="country" value="Liberia"></label>
+                    <hr>
+                    <label>Libya <input type="radio" name="country" value="Libya"></label>
+                    <hr>
+                    <label>Liechtenstein <input type="radio" name="country" value="Liechtenstein"></label>
+                    <hr>
+                    <label>Lithuania <input type="radio" name="country" value="Lithuania"></label>
+                    <hr>
+                    <label>Luxembourg <input type="radio" name="country" value="Luxembourg"></label>
+                    <hr>
+                    <label>Madagascar <input type="radio" name="country" value="Madagascar"></label>
+                    <hr>
+                    <label>Malawi <input type="radio" name="country" value="Malawi"></label>
+                    <hr>
+                    <label>Malaysia <input type="radio" name="country" value="Malaysia"></label>
+                    <hr>
+                    <label>Maldives <input type="radio" name="country" value="Maldives"></label>
+                    <hr>
+                    <label>Mali <input type="radio" name="country" value="Mali"></label>
+                    <hr>
+                    <label>Malta <input type="radio" name="country" value="Malta"></label>
+                    <hr>
+                    <label>Marshall Islands <input type="radio" name="country" value="Marshall Islands"></label>
+                    <hr>
+                    <label>Mauritania <input type="radio" name="country" value="Mauritania"></label>
+                    <hr>
+                    <label>Mauritius <input type="radio" name="country" value="Mauritius"></label>
+                    <hr>
+                    <label>Mexico <input type="radio" name="country" value="Mexico"></label>
+                    <hr>
+                    <label>Micronesia <input type="radio" name="country" value="Micronesia"></label>
+                    <hr>
+                    <label>Moldova <input type="radio" name="country" value="Moldova"></label>
+                    <hr>
+                    <label>Monaco <input type="radio" name="country" value="Monaco"></label>
+                    <hr>
+                    <label>Mongolia <input type="radio" name="country" value="Mongolia"></label>
+                    <hr>
+                    <label>Montenegro <input type="radio" name="country" value="Montenegro"></label>
+                    <hr>
+                    <label>Morocco <input type="radio" name="country" value="Morocco"></label>
+                    <hr>
+                    <label>Mozambique <input type="radio" name="country" value="Mozambique"></label>
+                    <hr>
+                    <label>Myanmar <input type="radio" name="country" value="Myanmar"></label>
+                    <hr>
+                    <label>Namibia <input type="radio" name="country" value="Namibia"></label>
+                    <hr>
+                    <label>Nauru <input type="radio" name="country" value="Nauru"></label>
+                    <hr>
+                    <label>Nepal <input type="radio" name="country" value="Nepal"></label>
+                    <hr>
+                    <label>Netherlands <input type="radio" name="country" value="Netherlands"></label>
+                    <hr>
+                    <label>New Zealand <input type="radio" name="country" value="New Zealand"></label>
+                    <hr>
+                    <label>Nicaragua <input type="radio" name="country" value="Nicaragua"></label>
+                    <hr>
+                    <label>Niger <input type="radio" name="country" value="Niger"></label>
+                    <hr>
+                    <label>Nigeria <input type="radio" name="country" value="Nigeria"></label>
+                    <hr>
+                    <label>North Macedonia <input type="radio" name="country" value="North Macedonia"></label>
+                    <hr>
+                    <label>Norway <input type="radio" name="country" value="Norway"></label>
+                    <hr>
+                    <label>Oman <input type="radio" name="country" value="Oman"></label>
+                    <hr>
+                    <label>Pakistan <input type="radio" name="country" value="Pakistan"></label>
+                    <hr>
+                    <label>Palau <input type="radio" name="country" value="Palau"></label>
+                    <hr>
+                    <label>Palestine <input type="radio" name="country" value="Palestine"></label>
+                    <hr>
+                    <label>Panama <input type="radio" name="country" value="Panama"></label>
+                    <hr>
+                    <label>Papua New Guinea <input type="radio" name="country" value="Papua New Guinea"></label>
+                    <hr>
+                    <label>Paraguay <input type="radio" name="country" value="Paraguay"></label>
+                    <hr>
+                    <label>Peru <input type="radio" name="country" value="Peru"></label>
+                    <hr>
+                    <label>Philippines <input type="radio" name="country" value="Philippines"></label>
+                    <hr>
+                    <label>Poland <input type="radio" name="country" value="Poland"></label>
+                    <hr>
+                    <label>Portugal <input type="radio" name="country" value="Portugal"></label>
+                    <hr>
+                    <label>Qatar <input type="radio" name="country" value="Qatar"></label>
+                    <hr>
+                    <label>Romania <input type="radio" name="country" value="Romania"></label>
+                    <hr>
+                    <label>Russia <input type="radio" name="country" value="Russia"></label>
+                    <hr>
+                    <label>Rwanda <input type="radio" name="country" value="Rwanda"></label>
+                    <hr>
+                    <label>Saint Kitts and Nevis <input type="radio" name="country" value="Saint Kitts and Nevis"></label>
+                    <hr>
+                    <label>Saint Lucia <input type="radio" name="country" value="Saint Lucia"></label>
+                    <hr>
+                    <label>Saint Vincent and the Grenadines <input type="radio" name="country" value="Saint Vincent and the Grenadines"></label>
+                    <hr>
+                    <label>Samoa <input type="radio" name="country" value="Samoa"></label>
+                    <hr>
+                    <label>San Marino <input type="radio" name="country" value="San Marino"></label>
+                    <hr>
+                    <label>Sao Tome and Principe <input type="radio" name="country" value="Sao Tome and Principe"></label>
+                    <hr>
+                    <label>Saudi Arabia <input type="radio" name="country" value="Saudi Arabia"></label>
+                    <hr>
+                    <label>Senegal <input type="radio" name="country" value="Senegal"></label>
+                    <hr>
+                    <label>Serbia <input type="radio" name="country" value="Serbia"></label>
+                    <hr>
+                    <label>Seychelles <input type="radio" name="country" value="Seychelles"></label>
+                    <hr>
+                    <label>Sierra Leone <input type="radio" name="country" value="Sierra Leone"></label>
+                    <hr>
+                    <label>Singapore <input type="radio" name="country" value="Singapore"></label>
+                    <hr>
+                    <label>Slovakia <input type="radio" name="country" value="Slovakia"></label>
+                    <hr>
+                    <label>Slovenia <input type="radio" name="country" value="Slovenia"></label>
+                    <hr>
+                    <label>Solomon Islands <input type="radio" name="country" value="Solomon Islands"></label>
+                    <hr>
+                    <label>Somalia <input type="radio" name="country" value="Somalia"></label>
+                    <hr>
+                    <label>South Africa <input type="radio" name="country" value="South Africa"></label>
+                    <hr>
+                    <label>South Sudan <input type="radio" name="country" value="South Sudan"></label>
+                    <hr>
+                    <label>Spain <input type="radio" name="country" value="Spain"></label>
+                    <hr>
+                    <label>Sri Lanka <input type="radio" name="country" value="Sri Lanka"></label>
+                    <hr>
+                    <label>Sudan <input type="radio" name="country" value="Sudan"></label>
+                    <hr>
+                    <label>Suriname <input type="radio" name="country" value="Suriname"></label>
+                    <hr>
+                    <label>Sweden <input type="radio" name="country" value="Sweden"></label>
+                    <hr>
+                    <label>Switzerland <input type="radio" name="country" value="Switzerland"></label>
+                    <hr>
+                    <label>Syria <input type="radio" name="country" value="Syria"></label>
+                    <hr>
+                    <label>Taiwan <input type="radio" name="country" value="Taiwan"></label>
+                    <hr>
+                    <label>Tajikistan <input type="radio" name="country" value="Tajikistan"></label>
+                    <hr>
+                    <label>Tanzania <input type="radio" name="country" value="Tanzania"></label>
+                    <hr>
+                    <label>Thailand <input type="radio" name="country" value="Thailand"></label>
+                    <hr>
+                    <label>Timor-Leste <input type="radio" name="country" value="Timor-Leste"></label>
+                    <hr>
+                    <label>Togo <input type="radio" name="country" value="Togo"></label>
+                    <hr>
+                    <label>Tonga <input type="radio" name="country" value="Tonga"></label>
+                    <hr>
+                    <label>Trinidad and Tobago <input type="radio" name="country" value="Trinidad and Tobago"></label>
+                    <hr>
+                    <label>Tunisia <input type="radio" name="country" value="Tunisia"></label>
+                    <hr>
+                    <label>Turkey <input type="radio" name="country" value="Turkey"></label>
+                    <hr>
+                    <label>Turkmenistan <input type="radio" name="country" value="Turkmenistan"></label>
+                    <hr>
+                    <label>Tuvalu <input type="radio" name="country" value="Tuvalu"></label>
+                    <hr>
+                    <label>Uganda <input type="radio" name="country" value="Uganda"></label>
+                    <hr>
+                    <label>Ukraine <input type="radio" name="country" value="Ukraine"></label>
+                    <hr>
+                    <label>United Arab Emirates <input type="radio" name="country" value="United Arab Emirates"></label>
+                    <hr>
+                    <label>United Kingdom <input type="radio" name="country" value="United Kingdom"></label>
+                    <hr>
+                    <label>United States of America <input type="radio" name="country" value="United States of America"></label>
+                    <hr>
+                    <label>Uruguay <input type="radio" name="country" value="Uruguay"></label>
+                    <hr>
+                    <label>Uzbekistan <input type="radio" name="country" value="Uzbekistan"></label>
+                    <hr>
+                    <label>Vanuatu <input type="radio" name="country" value="Vanuatu"></label>
+                    <hr>
+                    <label>Vatican City <input type="radio" name="country" value="Vatican City"></label>
+                    <hr>
+                    <label>Venezuela <input type="radio" name="country" value="Venezuela"></label>
+                    <hr>
+                    <label>Vietnam <input type="radio" name="country" value="Vietnam"></label>
+                    <hr>
+                    <label>Yemen <input type="radio" name="country" value="Yemen"></label>
+                    <hr>
+                    <label>Zambia <input type="radio" name="country" value="Zambia"></label>
+                    <hr>
+                    <label>Zimbabwe <input type="radio" name="country" value="Zimbabwe"></label>
+                    <hr>
+                </div>
+            </div>
+        </div>
+    
+
+    
+    <!--------------------------------SOME PROJECTS------------------------------------->
+
+
+    <!-- <section id="pro">
+
+        <div class="pro1">
+            <h6>Projects</h6>
+            <h1 data-aos="fade-up" data-aos-delay="100">We've Created Unforgetable Memories For Our Clients</h1>
+
+            <div class="father-category">
+
+                <div class="category-section">
+                  
+                  <div class="image-container2">
+                      <img src="image/6.jpg" alt="wedding Image 1" class="image image1">
+                      <img src="image/7.jpg" alt="wedding Image 2" class="image image2">
+                  </div>
+                  <h2>Mary et Ansalem</h2>
+                  <a href="chiza.html"><button>Click To View</button></a>
+                  </div>
+      
+      
+      
+                <div class="category-section">
+                  
+                <div class="image-container2">
+                    <img src="image/8.jpg" alt="wedding Image 1" class="image image1">
+                    <img src="image/9.jpg" alt="wedding Image 2" class="image image2">
+                </div>
+                <h2>Subomi et Olamide</h2>
+                <a href="ofusion.html"><button>Click To View</button></a>
+                </div>
+      
+      
+                <div class="category-section">
+                  
+                  <div class="image-container2">
+                      <img src="image/10.jpg" alt="wedding Image 1" class="image image1">
+                      <img src="image/11.jpg" alt="wedding Image 2" class="image image2">
+                  </div>
+                  <h2>Shukurat et Saheed</h2>
+                  <a href="squared.html"><button>Click To View</button></a>
+                  </div>
+        
+        
+                </div>
+
+
+                <h4>
+                    <a href="gallery.html">
+                        See More <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </h4>
+      
+      
+            </div>
+
+            
+            
+        </div>
+
+    </section> -->
+
+
+    <!------------------------------BRIEF------------------------------>
+
+    <!-- <section id="brief">
+        <h1 data-aos="fade-up">Florah Signature Events</h1>
+        <div class="abt-content">
+            <p data-aos="fade-up" data-aos-delay="100">
+                Located in the heart of Lagos, Nigeria, we pride ourselves as the leading experts in wedding, corporate, and social event planning. Meticulously designing extraordinary events, we focus on creating sophisticated and memorable experiences. Our passionate team is committed to offering customized services that align with your distinct vision and desires. At Florah Signature Events, we know that every detail matters, and we are dedicated to surpassing your expectations. Allow us to handle the intricacies, so you can fully embrace the joy and elegance of your special occasion
+            </p>
+        </div>
+
+    </section> -->
+
+
+      <!------------------------------WORKWITHUS------------------------------>
+
+
+
+      <section id="wrk">
+
+        <div class="wrk1">
+            <h6>Work With Us</h6>
+            <h1 data-aos="fade-up" data-aos-delay="100">Let's Transform Your Ideas Into Reality</h1>
+        
+            <h4>
+                <a href="book.html">
+                    Let's Work <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </h4>
+        
+        </div>
+
+      </section>
+
+
+      <!------------------------------FOOTER---------------------------->
+
+
+
+      <footer id="foot">
+
+
+        <div class="footlogo2">
+            <a href="index.html"><img src="image/logo webfooter.png" alt="logo"></a>
+        </div>
+        
+        <div class="footbdy">
+
+            <div class="footlogo">
+                <a href="index.html"><img src="image/logo web.png" alt="logo"></a>
+            </div>
+
+            <!-- <div class="footlogo2">
+                <a href="index.html"><img src="image/logo webfooter.png" alt="logo"></a>
+            </div> -->
+
+            <div class="mnu">
+                <a href="gallery.html">GALLERY</a>
+                <a href="service.html">SERVICE</a>
+                <a href="about.html">ABOUT</a>
+                <a href="book.html">CONTACT</a>
+            </div>
+
+            <div class="address">
+                <p>ADDRESS</p>
+                <h4>10, Theo Okunusi Street, Alapere, Kosofe Lagos</h4>
+
+                <div class="email">
+                    <h4>florahjoshua@gmail.com</h4>
+                    <h3>+2348125868036</h3>
+                </div>
+
+            </div>
+
+            <!-- <div class="email">
+                <h4>florahjoshua@gmail.com</h4>
+                <h3>+2348125868036</h3>
+            </div> -->
+
+            <!-- Newsletter Form -->
+                <form id="newsletterForm" action="https://script.google.com/macros/s/AKfycbwx1Uc4QPiolKThYpZYj-xTSJdBwnuUVNCERY-mhwLaGh3i217ygDM1sd7rXdnJHNHD/exec" method="POST">
+                    <div class="newsletter-container">
+                        <h2>Stay Updated About Our Event Budget</h2>
+                        <div class="newsletter-form">
+                            <div class="table">
+
+                                <div class="input-box">
+                                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="input-box">
+                                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                                </div>
+
+                            </div>
+                            <!-- <div class="input-box">
+                                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            </div> -->
+                            <button type="submit">SIGNUP</button><i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </form>
+
+                <!-- Loading Notification Box -->
+                <div id="loadingBox" class="notification-box">
+                    <div class="loading-circle"></div>
+                    <span>Sending message, please wait...</span>
+                </div>
+
+                <!-- Success Notification Box -->
+                <div id="successBox" class="notification-box">
+                    <span id="successMessage"></span>
+                </div>
+
+            <!-- <div class="social">
+
+                <div class="soc">
+                    <a href="https://www.instagram.com/florah_signatures/"><i class="fab fa-instagram"></i></a>
+
+                    
+                    <i class="fab fa-twitter"></i>
+
+                    
+                    <a href="https://web.facebook.com/prettyonda/"><i class="fab fa-facebook-f"></i></a>
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                    <a href="https://www.youtube.com/@MomentsWithFlorah"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="cpy">
+                    <i class="fa-regular fa-copyright"></i><h5>Florah Signature Events. All Rights Reserved</h5>
+                    
+                </div>
+
+                <h6>Created By <a href="https://betzalelco.xyz" class="mylink">Bezalel Concept</a></h6>
+            </div> -->
+
+
+        </div>
+
+        <div class="social">
+
+            <div class="soc">
+                <a href="https://www.instagram.com/florah_signatures/"><i class="fab fa-instagram"></i></a>
+
+                
+                <i class="fab fa-twitter"></i>
+
+                
+                <a href="https://web.facebook.com/prettyonda/"><i class="fab fa-facebook-f"></i></a>
+
+                <i class="fab fa-linkedin-in"></i>
+
+                <a href="https://www.youtube.com/@MomentsWithFlorah"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="cpy">
+                <i class="fa-regular fa-copyright"></i><h5>Florah Signature Events. All Rights Reserved</h5>
+                
+            </div>
+
+            <h6>Created By <a href="https://betzalelco.xyz" class="mylink">Bezalel Concept</a></h6>
+        </div>
+
+
+
+
+      </footer>
+
+
+      <!-------------------------------CASCADING STYLE SHEET------------------------------>
+
+    <style>
+
+        :root {
+            --green-color: #064403;
+            --defaultgold-color: #ffbf00;
+            --gold-color:#e2ae45;
+            /* --gold-color: #b5822c; */
+            --lightgold-color:#fff7eb;
+            --white-color: white;
+            --fadedgold: #f5d189;
+            --fade-out:rgb(255, 246, 246);
+            --dark-main-color:rgb(20, 18, 8);
+            --font-1:"Cormorant Garamond", serif;
+            --font-2: "Raleway", sans-serif;
+            --font-3: "Parisienne", cursive;
+        }
+
+
+        /*-----------------------------------HERO SERVICE--------------------*/
+
+
+        .simg img {
+            width: 100%;
+        }
+
+        #srvimg {
+            overflow: hidden;
+        }
+
+
+        /*-----------------------------------HIGHLIGHTEDSERVICE--------------------*/
+
+
+        
+
+        .container {
+            
+           margin-top: 50px;
+           padding-left: 25px;
+           padding-right: 25px;
+            
+        }
+
+        .container h1 {
+            font-size: 1.9em;
+            color: var(--gold-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-family: var(--font-1);
+        }
+
+        .container p {
+            font-size: 1.2em;
+            color: var(--dark-main-color);
+            font-weight: 500;
+            line-height: 30px;
+            
+        }
+
+
+
+        .container h2 {
+            font-size: 1.3em;
+            color: var(--gold-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+            margin-top: 30px;
+        }
+
+        .container ul {
+            padding-left: 18px;
+            padding-top: 10px;
+            padding-right: 18px;
+        }
+
+        .container li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: var(--gold-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: var(--dark-main-color);
+        }
+
+
+
+        /*===============Progress==========*/
+
+
+        #progress-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 70vh; /* Adjust as needed */
+        text-align: center;
+        background-color: var(--green-color);
+        margin-top: 30px;
+        margin-bottom: -90px;
+        }
+
+        .progress-container {
+        width: 100%;
+        /* max-width: 800px; */
+        padding-left: 25px;
+        padding-right: 25px;
+        }
+
+        .progress-bar-wrapper {
+        margin: 20px 0;
+        }
+
+        .progress-bar-wrapper p {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+        color: var(--white-color); /* Adjust as needed */
+        }
+
+        .progress-bar {
+        position: relative;
+        height: 30px;
+        background-color: rgb(199, 199, 199); /* Adjust as needed */
+        border-radius: 2px;
+        overflow: hidden;
+        }
+
+        .progress {
+        position: absolute;
+        height: 100%;
+        width: 0;
+        background-color: var(--gold-color); /* Adjust as needed */
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 10px;
+        color: white;
+        font-weight: bold;
+        border-radius: 2px;
+        transition: width 2s; /* Adjust the duration as needed */
+        }
+
+        /*---------------------------Vendor Registration Form------------------------*/
+
+
+        #vendor-registration {
+        padding: 50px 20px;
+        text-align: left;
+        overflow: hidden;
+        }
+
+        #vendor-registration h2 {
+        font-size: 2.5em;
+        color: var(--gold-color);
+        margin-bottom: 20px;
+        text-align: left;
+        font-weight: 500;
+        }
+
+        #vendor-registration p {
+        font-size: 1em;
+        color: var(--dark-main-color);
+        margin-bottom: 20px;
+        }
+
+        #vendor-registration label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-weight: 500;
+        }
+
+        #vendor-registration .required {
+        color: red;
+        }
+
+        #vendor-registration input,
+        #vendor-registration textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        #vendor-registration .custom-dropdown {
+        position: relative;
+        cursor: pointer;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        }
+
+        #vendor-registration .custom-dropdown .dropdown-icon {
+        font-size: 1.2em;
+        }
+
+        #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        
+        }
+
+        #dropdownOverlay {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 370px;
+        max-height: 700px;
+        overflow-y: auto;
+        z-index: 1001;
+        /* overflow: hidden; */
+        }
+
+        #dropdownOverlay .dropdown-frame {
+        padding: 20px;
+        }
+
+        #dropdownOverlay .dropdown-list label {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: center;
+        }
+
+        #dropdownOverlay .dropdown-list label input[type="radio"] {
+        transform: scale(1.5);
+        margin-left: 10px;
+        }
+
+        #dropdownOverlay .dropdown-list label input[type="radio"]:checked {
+        accent-color: var(--gold-color);
+        }
+
+        .loading-message, .success-message {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding: 15px;
+            border-radius: 0;
+            color: #fff;
+            font-size: 1em;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .loading-message {
+            background-color: var(--gold-color);
+        }
+
+        .success-message {
+            background-color: #4CAF50;
+        }
+
+        .loading-circle {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--dark-main-color);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 2s linear infinite;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+#dropdownOverlay .dropdown-list hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 20px -20px;
+
+}
+
+
+#vendor-registration button {
+  padding: 15px 50px;
+  text-align: center;
+  /* left: 10px; */
+  position: relative;
+  border: none;
+  /* border: 1px solid var(--gold-color); */
+  background-color: var(--gold-color);
+  color: var(--white-color);
+  cursor: pointer;
+  /* transition: background-color 0.3s ease-in-out; */
+  margin-top: 20px;
+}
+
+#vendor-registration button:hover {
+  background-color: var(--dark-main-color);
+  color: var(--white-color);
+}
+
+
+
+
+
+
+        /*------------------------------MEDIA QUERY---------------*/
+
+
+        @media (min-width: 728px) {
+
+            .srvice-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+
+        .intro1 h6 {
+            font-size: 1em;
+            padding-left: 5px;
+        }
+
+
+        /*---------------------------------EVENTPLANNING LIST------------*/
+
+        .container {
+            padding-left: 7%;
+            padding-right: 7%;
+        }
+
+
+        ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+        }
+
+        .container p {
+            font-size: 1.2em;
+            
+        }
+
+        .container li {
+            font-size: 1em;
+        }
+
+        ul li {
+        width: 48%; /* Adjust width as needed to fit two items per row with space between them */
+        }
+
+
+        /*---------------------------------PROGRESS------------*/
+
+
+        #progress-section{
+            height: 300px;
+            margin-top: 70px;
+        }
+
+        .progress-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Adjust spacing between items as needed */
+        padding-left: 55px;
+        padding-right: 55px;
+        }
+
+
+
+        /*-------------------------VENDOR REGISTRATION------------------*/
+
+
+        #vendor-form {
+            margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #vendor-form label,
+    #vendor-form input,
+    #vendor-form textarea,
+    #vendor-form .custom-dropdown {
+        width: calc(49% - 20px);
+        padding-left: 30px;
+       
+    }
+
+    .vendor-registration-container p {
+        padding-left: 30px;
+        padding-right: 150px;
+    }
+
+    #vendor-registration h2 {
+        padding-left: 30px;
+    }
+
+
+    #vendor-registration button{
+        margin-left: 30px;
+    }
+    
+
+
+
+    
+
+
+
+        }
+
+
+
+
+        /*----------------------------1024 MEDIA QUERY---------------*/
+
+
+        @media (min-width: 1024px) {
+
+        .srvice-info {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        }
+
+
+        .intro1 h6 {
+        font-size: 1em;
+        padding-left: 50px;
+        }
+
+
+        .simg {
+            width: 100%;
+            height: 500px;
+        }
+
+        .simg img {
+            width: 100%;
+        }
+
+
+
+        /*---------------------------------EVENTPLANNING LIST------------*/
+
+        .container {
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+
+
+        ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+        gap: 20px;
+        }
+
+        .container p {
+            font-size: 1.2em;
+            padding-right: 20%;
+            
+        }
+
+        .container li {
+            font-size: 1em;
+        }
+
+        ul li {
+        width: 30%; /* Adjust width as needed to fit two items per row with space between them */
+        }
+
+
+
+
+        /*---------------------------------PROGRESS------------*/
+
+
+        #progress-section{
+            height: 300px;
+            margin-top: 70px;
+        }
+
+        .progress-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px; /* Adjust spacing between items as needed */
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+
+
+
+     /*-------------------------VENDOR REGISTRATION------------------*/
+
+
+     #vendor-form {
+            margin-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    #vendor-form label,
+    #vendor-form input,
+    #vendor-form textarea,
+    #vendor-form .custom-dropdown {
+        width: calc(49% - 20px);
+        padding-left: 50px;
+       
+    }
+
+    .vendor-registration-container p {
+        padding-left: 50px;
+        padding-right: 150px;
+    }
+
+    #vendor-registration h2 {
+        padding-left: 50px;
+    }
+
+    .vendor-registration button {
+        padding-left: 50px;
+    }
+
+
+
+    #vendor-registration button{
+        margin-left: 50px;
+    }
+
+
+    
+
+
+
+}
+
+
+
+    </style>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+
+
+
+        //JAVASCRIPT FOR PROGRESS BAR UNDER EVENT PLANNING PAGE
+
+
+//=====================Progress Bar==========//
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('.progress');
+    let hasAnimated = false;
+
+    function animateProgressBar() {
+        progressBars.forEach(bar => {
+            const percentage = bar.getAttribute('data-percentage');
+            bar.style.width = percentage + '%';
+            bar.textContent = percentage + '%';
+        });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !hasAnimated) {
+                hasAnimated = true;
+                animateProgressBar();
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when at least 10% of the section is in view
+    });
+
+    observer.observe(document.getElementById('progress-section'));
+});
+
+
+
+
+    //JAVASCRIPT FOR VENDOR REGISTRATION
+
+     // Country dropdown toggle
+     function toggleDropdown() {
+        const overlay = document.getElementById('overlay');
+        const dropdownOverlay = document.getElementById('dropdownOverlay');
+        const displayStyle = overlay.style.display === 'block' ? 'none' : 'block';
+        overlay.style.display = displayStyle;
+        dropdownOverlay.style.display = displayStyle;
+    }
+
+    document.querySelectorAll('#dropdownOverlay .dropdown-list input[type="radio"]').forEach(input => {
+        input.addEventListener('change', function() {
+            document.getElementById('selected-country').innerText = this.value;
+            toggleDropdown();
+        });
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function(event) {
+        const dropdown = document.querySelector('.custom-dropdown');
+        const overlay = document.getElementById('overlay');
+        const dropdownOverlay = document.getElementById('dropdownOverlay');
+        if (!dropdown.contains(event.target) && !dropdownOverlay.contains(event.target)) {
+            overlay.style.display = 'none';
+            dropdownOverlay.style.display = 'none';
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form'); // Adjust the selector if needed
+    const loadingMessage = document.querySelector('.loading-message');
+    const successMessage = document.querySelector('.success-message');
+    const userNameSpan = document.getElementById('user-name');
+
+    // Hide messages initially
+    loadingMessage.style.display = 'none';
+    successMessage.style.display = 'none';
+
+    // Form submission handler
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        loadingMessage.style.display = 'block'; // Show loading message
+
+        // Create a FormData object to handle form submission
+        const formData = new FormData(form);
+
+        // Prepare AJAX request
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json' // Ensure Formspree handles JSON response
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                return response.json(); // Process JSON response from Formspree
+            }
+            throw new Error('Network response was not ok.');
+        })
+        .then(data => {
+            const userName = form.querySelector('[name="name"]').value; // Adjust selector for name field
+
+            loadingMessage.style.display = 'none'; // Hide loading message
+            successMessage.style.display = 'block'; // Show success message
+            userNameSpan.textContent = userName; // Set the user's name in the success message
+
+            form.reset(); // Reset the form fields
+
+            // Hide success message after 6 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 6000); // 6000 milliseconds = 6 seconds
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            loadingMessage.style.display = 'none'; // Hide loading message in case of error
+        });
+    });
+
+   
+});
+
+
+
+
+    </script>
+    
+</body>
+</html>
