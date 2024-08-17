@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const span = document.querySelector("#intro .intro1 span");
-    const texts = ['Planning', 'Coordination', 'Consultancy', 'Management'];
+    const texts = ['Experience', 'Planning', 'Memory', 'Moment'];
     let index = 0;
 
     function changeText() {
